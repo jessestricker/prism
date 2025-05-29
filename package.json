@@ -8,6 +8,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc --build",
+    "build:check": "tsc --build --noEmit",
     "clean": "tsc --build --clean",
     "format": "prettier --write .",
     "format:check": "prettier --check .",

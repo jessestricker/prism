@@ -11,12 +11,17 @@
     "clean": "tsc --build --clean",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "lint": "eslint --fix .",
+    "lint:check": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "packageManager": "pnpm@10.11.0",
   "devDependencies": {
+    "@eslint/js": "^9.27.0",
     "@tsconfig/strictest": "^2.0.5",
+    "eslint": "^9.27.0",
     "prettier": "^3.5.3",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.33.0"
   }
 }

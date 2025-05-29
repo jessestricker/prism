@@ -16,5 +16,5 @@ export default tseslint.config(
       },
     },
   },
-  globalIgnores(["eslint.config.js"]),
+  globalIgnores(["dist/", "eslint.config.js"]),
 );

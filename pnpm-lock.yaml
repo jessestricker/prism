@@ -8,17 +8,35 @@ importers:
 
   .:
     devDependencies:
+      '@tsconfig/strictest':
+        specifier: ^2.0.5
+        version: 2.0.5
       prettier:
         specifier: ^3.5.3
         version: 3.5.3
+      typescript:
+        specifier: ^5.8.3
+        version: 5.8.3
 
 packages:
+
+  '@tsconfig/strictest@2.0.5':
+    resolution: {integrity: sha512-ec4tjL2Rr0pkZ5hww65c+EEPYwxOi4Ryv+0MtjeaSQRJyq322Q27eOQiFbuNgw2hpL4hB1/W/HBGk3VKS43osg==}
 
   prettier@3.5.3:
     resolution: {integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==}
     engines: {node: '>=14'}
     hasBin: true
 
+  typescript@5.8.3:
+    resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
 snapshots:
 
+  '@tsconfig/strictest@2.0.5': {}
+
   prettier@3.5.3: {}
+
+  typescript@5.8.3: {}

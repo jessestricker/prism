@@ -7,12 +7,16 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "packageManager": "pnpm@10.11.0",
   "devDependencies": {
-    "prettier": "^3.5.3"
+    "@tsconfig/strictest": "^2.0.5",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3"
   }
 }

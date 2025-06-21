@@ -1,3 +1,3 @@
-export function hello(): string {
-  return "Hello World";
-}
+export { RgbColorBase } from "./base.js";
+export { type Vector3 } from "./internal/linalg.js";
+export { Srgb, SrgbLinear } from "./srgb.js";

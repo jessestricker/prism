@@ -22,5 +22,10 @@ XYZ_rgb = XYZ_r.row_join(XYZ_g).row_join(XYZ_b)
 S_rgb = XYZ_rgb.inv() * XYZ_w
 SSS_rgb = S_rgb.T.col_join(S_rgb.T).col_join(S_rgb.T)
 M = SSS_rgb.multiply_elementwise(XYZ_rgb)
+M_inv = M.inv()
 
+print("RGB to XYZ:")
 print_float64(M)
+print()
+print("XYZ to RGB:")
+print_float64(M_inv)

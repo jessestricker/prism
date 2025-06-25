@@ -9,7 +9,7 @@
   "scripts": {
     "build": "tsc --build",
     "build:check": "tsc --build --noEmit",
-    "clean": "tsc --build --clean",
+    "clean": "node --eval \"fs.rmSync('dist', { recursive: true, force: true })\"",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint --fix .",

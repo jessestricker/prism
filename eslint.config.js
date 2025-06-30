@@ -1,19 +1,25 @@
 // @ts-check
 
+import { includeIgnoreFile } from "@eslint/compat";
 import eslint from "@eslint/js";
-import tseslint from "typescript-eslint";
-import { globalIgnores } from "eslint/config";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
+import { globalIgnores } from "eslint/config";
+import { fileURLToPath } from "node:url";
+import tseslint from "typescript-eslint";
+
+const file = (path) => fileURLToPath(new URL(path, import.meta.url));
 
 export default tseslint.config(
   eslint.configs.recommended,
   tseslint.configs.strictTypeChecked,
   tseslint.configs.stylisticTypeChecked,
+  includeIgnoreFile(file(".gitignore")),
+  globalIgnores(["eslint.config.js"]),
   {
     languageOptions: {
       parserOptions: {
         projectService: true,
-        tsconfigRootDir: import.meta.dirname,
+        tsconfigRootDir: file("."),
       },
     },
     plugins: {
@@ -24,5 +30,4 @@ export default tseslint.config(
       "simple-import-sort/exports": "error",
     },
   },
-  globalIgnores(["dist/", "eslint.config.js"]),
 );

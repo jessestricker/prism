@@ -2,8 +2,8 @@ import { RgbColorBase } from "./base.js";
 import { CieXyzD65 } from "./ciexyz.js";
 import {
   mapVector,
-  multiplyMatrixVector,
   type Matrix3,
+  multiplyMatrixVector,
 } from "./internal/linalg.js";
 
 /**

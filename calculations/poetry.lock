@@ -100,4 +100,4 @@ dev = ["hypothesis (>=6.70.0)", "pytest (>=7.1.0)"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.13"
-content-hash = "933653ccf0e3ffb96d1444c9b785dee97bb061782a0f925a7219c6d7efc4ff7f"
+content-hash = "d1a7aa7cdd61c23cb5306ef206ebc2eaf457e68f62c69ec97ef5d3dd61915419"

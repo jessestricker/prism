@@ -12,6 +12,14 @@ export function mapVector(
   return vector.map(transform) as Vector3;
 }
 
+export function multiplyVector(a: Vector3, b: Vector3): Vector3 {
+  return [a[0] * b[0], a[1] * b[1], a[2] * b[2]];
+}
+
+export function divideVector(a: Vector3, b: Vector3): Vector3 {
+  return [a[0] / b[0], a[1] / b[1], a[2] / b[2]];
+}
+
 export type Matrix3 = [
   [number, number, number],
   [number, number, number],

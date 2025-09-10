@@ -1,7 +1,9 @@
 name: Check
 on:
   pull_request:
-  workflow_call:
+    branches: [main]
+  push:
+    branches: [main]
 jobs:
   build:
     name: Build

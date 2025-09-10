@@ -3,13 +3,13 @@
 import { includeIgnoreFile } from "@eslint/compat";
 import eslint from "@eslint/js";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
-import { globalIgnores } from "eslint/config";
+import { defineConfig, globalIgnores } from "eslint/config";
 import { fileURLToPath } from "node:url";
 import tseslint from "typescript-eslint";
 
 const file = (path) => fileURLToPath(new URL(path, import.meta.url));
 
-export default tseslint.config(
+export default defineConfig(
   eslint.configs.recommended,
   tseslint.configs.strictTypeChecked,
   tseslint.configs.stylisticTypeChecked,

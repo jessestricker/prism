@@ -22,12 +22,30 @@ export default tseslint.config(
         tsconfigRootDir: file("."),
       },
     },
+  },
+  {
     plugins: {
       "simple-import-sort": simpleImportSort,
     },
     rules: {
       "simple-import-sort/imports": "error",
       "simple-import-sort/exports": "error",
+    },
+  },
+  {
+    rules: {
+      "@typescript-eslint/no-floating-promises": [
+        "error",
+        {
+          allowForKnownSafeCalls: [
+            {
+              from: "package",
+              package: "node:test",
+              name: ["suite", "test"],
+            },
+          ],
+        },
+      ],
     },
   },
 );

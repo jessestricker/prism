@@ -1,12 +1,10 @@
 {
-  "extends": "@tsconfig/strictest/tsconfig.json",
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "module": "nodenext",
     "target": "es2015",
-    "verbatimModuleSyntax": true,
     "declaration": true,
-    "sourceMap": true,
     "declarationMap": true,
+    "sourceMap": true,
     "rootDir": "src",
     "outDir": "dist"
   },
